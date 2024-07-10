@@ -17,7 +17,7 @@ public class fila<E> {
         quantidade = 0;
     }
 
-    public void entra(Object e) {
+    public void Entra(Object e) {
         nodo<Object> x = new nodo<Object>(e);
         quantidade++;
 
@@ -30,9 +30,8 @@ public class fila<E> {
         fim = x;
     }
 
-    public Object sai() {
-        if (quantidade == 0 || comeco == null)
-            throw new EDLVazioExcecao("Fila Vazia");
+    public Object Sai() {
+        if(Vazio()) throw new EDLVazioExcecao("Fila vazia");
         else {
             Object ans = comeco.getobj();
             comeco = comeco.getprox();
@@ -40,7 +39,7 @@ public class fila<E> {
         }
     }
 
-    public void printfila() {
+    public void PrintFila() {
         if (quantidade != 0) {
             nodo<Object> x = comeco;
             while (x != null) {
@@ -51,28 +50,37 @@ public class fila<E> {
         System.out.println("Acabô");
     }
 
-    public void limpar() {
+    public void Limpar() {
         comeco = null;
         fim = null;
+        quantidade = 0;
     }
 
-    public Object inicio() {
+    public Object Inicio() {
+        if(Vazio()) throw new EDLVazioExcecao("Fila vazia");
         return comeco.getobj();
     }
 
-    public int tamanho() {
+    public Object Final(){
+        if(Vazio()) throw new EDLVazioExcecao("Fila vazia");
+        return fim.getobj();
+    }
+
+    public int Tamanho() {
         return quantidade;
     }
 
-    public boolean vazio() {
+    public boolean Vazio() {
         return quantidade == 0;
     }
 
-    public nodo<Object> comeco() {
+    public nodo<Object> Comeco() {
+        if(Vazio()) throw new EDLVazioExcecao("Fila vazia");
         return this.comeco;
     }
 
-    public nodo<Object> fim() {
+    public nodo<Object> Fim() {
+        if(Vazio()) throw new EDLVazioExcecao("Fila vazia");
         return this.fim;
     }
 
