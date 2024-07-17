@@ -1,7 +1,7 @@
 package vetor;
 
+import Excecoes.EDLVazioExcecao;
 import nodo.nodo;
-import EDLVazioExcecao.EDLVazioExcecao;
 
 public class vetorll<T> {
     private nodo<Object> primeiro;

@@ -2,7 +2,7 @@
 
 package fila;
 
-import EDLVazioExcecao.EDLVazioExcecao;
+import Excecoes.EDLVazioExcecao;
 import nodo.nodo;
 
 public class fila<E> {

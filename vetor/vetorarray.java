@@ -1,6 +1,6 @@
 package vetor;
 
-import EDLVazioExcecao.EDLVazioExcecao;
+import Excecoes.EDLVazioExcecao;
 
 public class vetorarray<T> {
     private Object[] dado;

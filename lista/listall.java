@@ -1,7 +1,7 @@
 package lista;
 
+import Excecoes.EDLVazioExcecao;
 import nodo.nodo;
-import EDLVazioExcecao.EDLVazioExcecao;
 
 public class listall<T> {
 
